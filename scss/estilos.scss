@@ -1,0 +1,107 @@
+/*-----ColorBody-------*/
+
+body{background-color: #a3b18a;}
+
+/*-----Color del titulo principal-------*/
+
+.colorTitulo{color: #dda15e;
+font-family:monospace; font-size: 100px ;font-weight:bold; font-style: italic;text-align: center;}
+/*-----menu-------*/
+
+.listanavegacion{text-align: center;} li{display:inline-block;list-style-type: none;font-size: 40px; padding: 0 20px;margin-bottom: 30px;border-style:dotted;border-color:#2b2d42 ;font-family: monospace;background-color:#dda15e;}
+
+/*-----fondos celestes-------*/
+.fondoceleste{background-color: #2b2d42;position:static;}
+
+.footer{position:static;}
+
+/*-----tabla del footer-------*/
+
+table{text-align: center;width: 100%; color:#dda15e ;font-weight: bold;font-size:medium;font-family: monospace;background-color: #2b2d42;}
+
+header{border-style:solid;}
+
+/*-----titulo de section productos-------*/
+
+.tituloh2P{font-family:monospace; font-weight: bold;font-size:20px;border-style:dotted;border-color:#2b2d42;background-color:#dda15e;}
+
+/*-----titulos y texto---*/
+
+.titulosobrenosotros{font-family:monospace; font-weight: bold;font-size:30px;border-style:dotted;border-color:#2b2d42;background-color:#dda15e;}
+.titulosabiasque{font-family:monospace; font-weight: bold;font-size:20px;border-style:dotted;border-color:#2b2d42;background-color:#dda15e;}
+.tituloblog{font-family:monospace; font-weight: bold;font-size:30px;border-style:dotted;border-color:#2b2d42;background-color:#dda15e;}
+.textogeneral{font-family: arial;font-size: 15px;}
+
+/*-----estructura grid-------*/
+.contenedorgritotal{display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.5fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "nosotros productos"
+    "footer footer";
+    column-gap: 20px;
+    row-gap: 20px;
+    
+    }
+    .fondoceleste{grid-area: titulo;}
+    .main{grid-area:nosotros;}
+    .section{grid-area: productos;}
+    .footer{grid-area: footer;}
+
+    .section{display: grid;
+        justify-items: center;
+        align-items: center;
+}
+    .main{display: grid;
+    justify-items: center;
+    align-items: center;  
+}
+@media screen and (max-width: 500px) {
+    .contenedorgritotal{
+        grid-template-columns: 1fr;
+        grid-template-columns: 0.2fr 1fr 1fr 0.5fr;
+        grid-template-areas: "titulo"
+                             "nosotros"
+                             "productos"
+                             "footer";
+                             
+    
+}}
+/*-----estructura grid pagina blog-------*/
+
+.contenedorgridblog{display: grid;
+    box-shadow:10px 10px 10px 10px;
+    border-radius: 4px;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.5fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "blog blog2"
+    "footer footer";
+    column-gap: 20px;
+    row-gap: 20px;
+    }
+    .mainblog{grid-area: blog;}
+    .sectionblog{grid-area: blog2;}
+    
+    .blogatos{font-family:monospace; font-weight: bold;font-size:30px;border-style:dotted;border-color:#2b2d42;background-color:#dda15e;text-align: center;}
+    .blogperros{font-family:monospace; font-weight: bold;font-size:30px;border-style:dotted;border-color:#2b2d42;background-color:#dda15e;text-align: center;}
+    .titulosblog{font-family:monospace; font-weight: bold;font-size:15px;text-align: start;}
+
+    @media screen and (max-width: 500px) {
+        .contenedorgridblog{
+            grid-template-columns: 1fr;
+            grid-template-columns: 0.2fr 1fr 1fr 0.5fr;
+            grid-template-areas: "titulo"
+                                 "blog"
+                                 "blog2"
+                                 "footer";
+                                 ;
+        
+    }}
+    /*-------pseudoclases--*/
+    a:hover{background-color: #a3b18a;font-size: 30px;font-family: 'Times New Roman';}
+    a:active{background-color:aliceblue;}
+    a:visited{background-color:aliceblue;color:black;}
